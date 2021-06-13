@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AngleDimension.App">
+    <Application.Resources>
+        <Color x:Key="ColorPrimary">#32CD32</Color>
+        <Color x:Key="ColorPrimaryDark">#FFF</Color>
+        
+        <Style x:Key="H1" TargetType="Label">
+            <Setter Property="FontSize" Value="97"/>
+            <Setter Property="CharacterSpacing" Value="-1.5"/>
+            <Setter Property="FontFamily" Value="Montserrat-Light"/>
+        </Style>
+        <Style x:Key="H2" TargetType="Label">
+            <Setter Property="FontSize" Value="61"/>
+            <Setter Property="CharacterSpacing" Value="-0.5"/>
+            <Setter Property="FontFamily" Value="Montserrat-Light"/>
+        </Style>
+        <Style x:Key="H3" TargetType="Label">
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="CharacterSpacing" Value="0"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+        </Style>
+        <Style x:Key="H4" TargetType="Label">
+            <Setter Property="FontSize" Value="34"/>
+            <Setter Property="CharacterSpacing" Value="0.25"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+        </Style>
+        <Style x:Key="H5" TargetType="Label">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="CharacterSpacing" Value="0"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+        </Style>
+        <Style x:Key="H6" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="CharacterSpacing" Value="0.15"/>
+            <Setter Property="FontFamily" Value="Montserrat-Medium"/>
+        </Style>
+        <Style x:Key="SubTitle1" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="CharacterSpacing" Value="0.15"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+        </Style>
+        <Style x:Key="SubTitle2" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="CharacterSpacing" Value="0.1"/>
+            <Setter Property="FontFamily" Value="Montserrat-Medium"/>
+        </Style>
+        <Style x:Key="Body1" TargetType="Label">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="CharacterSpacing" Value="0.5"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+        </Style>
+        <Style x:Key="Body2" TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="CharacterSpacing" Value="0.25"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="CharacterSpacing" Value="0.25"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+        </Style>
+    </Application.Resources>
+</Application>

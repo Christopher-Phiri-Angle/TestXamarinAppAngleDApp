@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AngleDimension.Views.BMSPage"
+             xmlns:controls="clr-namespace:AngleDimension.Controls" 
+             xmlns:vm="clr-namespace:AngleDimension.ViewModels"
+             Padding="16,0"
+              Shell.NavBarIsVisible="True">
+    <ContentPage.BindingContext>
+        <vm:BMSViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Margin="0,10,0,0">
+            <controls:TitleBar PageTitleText="Business Messaging Services"
+                           PageDescriptionText="Messaging is the fastest-growing and most widely used form of interpersonal communication. Whether it's Facebook Messenger, WhatsApp, another chat app or an SMS, these services are an important part of your customers' lives and your customer support strategy. Boost your sales by taking the conversation to these engaging channels using our business messaging solution to power your customer engagement."
+                           />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

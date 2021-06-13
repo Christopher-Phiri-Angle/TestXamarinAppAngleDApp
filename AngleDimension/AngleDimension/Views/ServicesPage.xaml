@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:vm="clr-namespace:AngleDimension.ViewModels"
+             x:Class="AngleDimension.Views.ServicesPage"
+             Padding="16">
+    <ContentPage.BindingContext>
+        <vm:ServiceViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Services" Style="{StaticResource H4}"/>
+            <Frame>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="What We Do" Style="{StaticResource H5}"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Innovate like a startup"  Style="{StaticResource H6}"/>
+                        <Label Text="Our dedicated development team will build your product on time and on budget, checking in after each weekly milestone"/>
+                    </StackLayout>
+                    <Button Text="Read More" Command="{Binding WhatCommand}"/>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Business Messaging Services" Style="{StaticResource H5}"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Connect with your customers on their favorite channels"  Style="{StaticResource H6}"/>
+                        <Label Text="Use our Business Messaging Solution and let chatbots generate leads, create help tickets, and chat across channels, greet customers and quickly route chats with the help of AI."/>
+                    </StackLayout>
+                    <Button Text="Read More" Command="{Binding BMSCommand}"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

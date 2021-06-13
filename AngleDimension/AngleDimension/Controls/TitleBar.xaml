@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:cv="clr-namespace:AngleDimension.Controls"
+             x:Class="AngleDimension.Controls.TitleBar">
+    <ContentView.Content>
+        <StackLayout>
+            <Grid ColumnDefinitions="10,Auto" Margin="0,0,0,10">
+                <BoxView Grid.Column="0" BackgroundColor="{StaticResource ColorPrimary}" WidthRequest="3" HorizontalOptions="Start" VerticalOptions="FillAndExpand"/>
+                <Label x:Name="PageTitle" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"  Style="{StaticResource H5}"/>
+            </Grid>
+            <Label x:Name="PageDescription"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

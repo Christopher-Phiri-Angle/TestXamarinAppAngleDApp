@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AngleDimension.AppShell"
+       xmlns:views="clr-namespace:AngleDimension.Views"
+       Shell.NavBarIsVisible="False">
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}"/>
+        </Tab>
+        <Tab Title="Services"  Icon="service.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ServicesPage}"/>
+        </Tab>
+        <Tab Title="About"  Icon="help.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}"/>
+        </Tab>
+    </TabBar>
+</Shell>

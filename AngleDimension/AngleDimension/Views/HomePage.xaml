@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:AngleDimension.ViewModels"
+             x:Class="AngleDimension.Views.HomePage">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Color x:Key="ColorDarkGray">#fff</Color>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Grid HeightRequest="190" RowDefinitions="130,*">
+                <BoxView Grid.RowSpan="2">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStopCollection>
+                                <GradientStop Color="#57B863" Offset="0"/>
+                                <GradientStop Color="#484848" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Grid Grid.Row="0" RowDefinitions="80,*">
+                    <StackLayout BackgroundColor="{StaticResource ColorDarkGray}">
+                        <BoxView BackgroundColor="{StaticResource ColorDarkGray}"/>
+                        <Path Data="M0,0H375V129.651s-9.025,2.382-55.426-5.3-70.141-41.09-130.3-41.176-83.544,33.5-130.893,41.176S0,129.651,0,129.651Z" Aspect="Fill" Fill="#fff"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Margin="30">
+                        <Image Source="logo.png" WidthRequest="120"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <StackLayout  Padding="16">
+                <Label Text="PRODUCTS WE HAVE" Style="{StaticResource H6}"/>
+                <Label Text="Built with innovation and user experience at heart" Style="{StaticResource SubTitle1}"/>
+                <CarouselView ItemsSource="{Binding Products}" PeekAreaInsets="80" Grid.Row="2" Margin="0,16" HeightRequest="280">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="8"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="Gray" CornerRadius="20" HorizontalOptions="Center">
+                                <StackLayout>
+                                    <Image Source="{Binding Image}" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,10"/>
+
+                                    <Label Text="{Binding Title}" TextColor="Black" Style="{StaticResource SubTitle1}" FontAttributes="Bold"
+                                        HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding Description}" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
