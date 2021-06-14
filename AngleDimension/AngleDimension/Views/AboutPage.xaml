@@ -104,7 +104,7 @@
                     <StackLayout>
                         <Label Text="Our Office hours" Style="{StaticResource H6}" TextColor="White"/>
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <Image Source="watch.png" HeightRequest="20" WidthRequest="20"/>
                             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                                 <Label Text="Our offices are open from 8:00 am to 4:30 pm"  TextColor="White" Style="{StaticResource Caption}"/>
                                 <Label Text="Monday - Friday (only working days)"  TextColor="White"  Style="{StaticResource Caption}"/>
@@ -114,21 +114,21 @@
                     <StackLayout>
                         <Label Text="Contact Us" Style="{StaticResource H6}" TextColor="White"/>
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <Image Source="phone.png" HeightRequest="20" WidthRequest="20"/>
                             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                                 <Label Text="Private Bag B416, Capital City, Lilongwe 3, Malawi"  TextColor="White" Style="{StaticResource Caption}"/>
                                 <Label Text="Area 47, Plot Number 47/1/33, Lilongwe"  TextColor="White"  Style="{StaticResource Caption}"/>
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <Image Source="location.png" HeightRequest="20" WidthRequest="20"/>
                             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                                 <Label Text="+265 (0) 1 761 800"  TextColor="White" Style="{StaticResource Caption}"/>
                                 <Label Text="Direct Line"  TextColor="White"  Style="{StaticResource Caption}"/>
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <Image Source="mail.png" HeightRequest="20" WidthRequest="20"/>
                             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                                 <Label Text="info@angledimension.com"  TextColor="White" Style="{StaticResource Caption}"/>
                                 <Label Text="Customer inquiry email"  TextColor="White"  Style="{StaticResource Caption}"/>
