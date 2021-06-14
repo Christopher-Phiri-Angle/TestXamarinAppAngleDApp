@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AngleDimension.AppShell"
        xmlns:views="clr-namespace:AngleDimension.Views"
-       Shell.NavBarIsVisible="False">
+       Shell.NavBarIsVisible="False"
+       Shell.NavBarHasShadow="False"
+       BackgroundColor="White"
+       Shell.ForegroundColor="Black"
+       Shell.TabBarTitleColor="{StaticResource ColorPrimary}">
     <TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}"/>

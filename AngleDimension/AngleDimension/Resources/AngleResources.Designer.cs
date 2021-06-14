@@ -61,6 +61,33 @@ namespace AngleDimension.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Our Journey.
+        /// </summary>
+        internal static string AboutSectionTitle {
+            get {
+                return ResourceManager.GetString("AboutSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get to know WHO we are, WHAT we do, and WHY we do it.
+        /// </summary>
+        internal static string AboutUsSubTitle {
+            get {
+                return ResourceManager.GetString("AboutUsSubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Know More About Angle Dimension.
+        /// </summary>
+        internal static string AboutUsTitle {
+            get {
+                return ResourceManager.GetString("AboutUsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Our origins date back to the early months of 2011 in Malawi. During this period a number of software products and services were readily available within the country, however these were typically sourced from foreign entities and were usually plagued with inadequate functionality, costly to acquire especially with the consideration of having to make use of foreign currency for payments, and not easily sustainable due to support teams not being conveniently located.
         ///
         ///Four individuals (three software develop [rest of string was truncated]&quot;;.
@@ -68,6 +95,42 @@ namespace AngleDimension.Resources {
         internal static string CompanyInfo {
             get {
                 return ResourceManager.GetString("CompanyInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The company&apos;s leadership is comprised of five individuals with various backgrounds and experiences, who are all driven to ensuring the availability of affordable and quality enterprise-grade software products and services within the Malawian and African markets..
+        /// </summary>
+        internal static string TeamInfo {
+            get {
+                return ResourceManager.GetString("TeamInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leadership.
+        /// </summary>
+        internal static string TeamSectionTitle {
+            get {
+                return ResourceManager.GetString("TeamSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Angle Dimension has a remarkably talented and perfectly qualified Management team specialized in various roles..
+        /// </summary>
+        internal static string TeamSubTitle {
+            get {
+                return ResourceManager.GetString("TeamSubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Team.
+        /// </summary>
+        internal static string TeamTitle {
+            get {
+                return ResourceManager.GetString("TeamTitle", resourceCulture);
             }
         }
     }

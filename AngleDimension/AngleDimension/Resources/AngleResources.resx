@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutSectionTitle" xml:space="preserve">
+    <value>Our Journey</value>
+  </data>
+  <data name="AboutUsSubTitle" xml:space="preserve">
+    <value>Get to know WHO we are, WHAT we do, and WHY we do it</value>
+  </data>
+  <data name="AboutUsTitle" xml:space="preserve">
+    <value>Know More About Angle Dimension</value>
+  </data>
   <data name="CompanyInfo" xml:space="preserve">
     <value>Our origins date back to the early months of 2011 in Malawi. During this period a number of software products and services were readily available within the country, however these were typically sourced from foreign entities and were usually plagued with inadequate functionality, costly to acquire especially with the consideration of having to make use of foreign currency for payments, and not easily sustainable due to support teams not being conveniently located.
 
 Four individuals (three software developers and one communication networks specialist) recognized this lack of locally developed software products and services, and decided that they would work together to ensure that Malawians had quality, affordable, and conveniently located software products and services at their disposal. This collaboration lead to the establishment of Angle Dimension and its registration as a company on 13th October 2011.
 
 Over time we have continuously improved ourselves growing our products and services portfolio as well as our clientele, which has spanned various industries within Malawi. As of 2019 we are professionally recognized as Angle Dimension Ltd, a duly registered private limited company in accordance with the provisions of the Business Names Registration Act (Cap 46:02) of the Republic of Malawi.</value>
+  </data>
+  <data name="TeamInfo" xml:space="preserve">
+    <value>The company's leadership is comprised of five individuals with various backgrounds and experiences, who are all driven to ensuring the availability of affordable and quality enterprise-grade software products and services within the Malawian and African markets.</value>
+  </data>
+  <data name="TeamSectionTitle" xml:space="preserve">
+    <value>Leadership</value>
+  </data>
+  <data name="TeamSubTitle" xml:space="preserve">
+    <value>Angle Dimension has a remarkably talented and perfectly qualified Management team specialized in various roles.</value>
+  </data>
+  <data name="TeamTitle" xml:space="preserve">
+    <value>The Team</value>
   </data>
 </root>

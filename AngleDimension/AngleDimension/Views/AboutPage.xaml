@@ -2,74 +2,141 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:AngleDimension.Resources"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:vm="clr-namespace:AngleDimension.ViewModels"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:vm="clr-namespace:AngleDimension.ViewModels"
              x:Class="AngleDimension.Views.AboutPage"
              Padding="16">
     <ContentPage.BindingContext>
         <vm:AboutViewModel x:Name="vm" />
     </ContentPage.BindingContext>
     <ScrollView>
-        <StackLayout>
-            <Grid>
-                <Label Text="About"/>
+        <StackLayout Padding="0,0,0,40">
+            <Grid Padding="20">
+                <Label Text="About" Style="{StaticResource H4}" VerticalOptions="Center" HorizontalOptions="Center"/>
             </Grid>
-            <Frame>
+            <pv:PancakeView CornerRadius="20" BackgroundColor="#4E4D4D" Padding="16">
                 <xct:Expander>
                     <xct:Expander.Header>
                         <StackLayout>
-                            <Label Text="Know More About Angle Dimension"/>
-                            <Label Text="Get to know WHO we are, WHAT we do, and WHY we do it"/>
+                            <Label Text="{x:Static resources:AngleResources.AboutUsTitle}" Style="{StaticResource H5}" TextColor="{StaticResource ColorPrimary}"/>
+                            <Label Text="{x:Static resources:AngleResources.AboutUsSubTitle}"  Style="{StaticResource SubTitle1}" TextColor="White"/>
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView Grid.Column="0" BackgroundColor="Green" WidthRequest="3" HorizontalOptions="Start" 
+                                             VerticalOptions="FillAndExpand"/>
+                                <Label Text="{x:Static resources:AngleResources.AboutSectionTitle}"  TextColor="White"  Style="{StaticResource H6}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
                         </StackLayout>
                     </xct:Expander.Header>
-                    <StackLayout>
-                        <Grid ColumnDefinitions="10,Auto">
-                            <BoxView Grid.Column="0" BackgroundColor="Green" WidthRequest="3" HorizontalOptions="Start" 
-                                             VerticalOptions="FillAndExpand"/>
-                            <Label Text="Our Journey" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                        </Grid>
-                        <Label Text="{x:Static resources:AngleResources.CompanyInfo}"/>
-                        <Grid RowDefinitions="200,*" ColumnDefinitions="*,*">
-                            <Frame>
+                    <StackLayout Margin="0, 20">
+                        <Label Text="{x:Static resources:AngleResources.CompanyInfo}" TextColor="White" Style="{StaticResource Body1}"/>
+                        <Grid ColumnDefinitions="1*,1*" RowDefinitions="Auto,Auto" Margin="0,10,0,0">
+                            <Frame Grid.Column="0">
                                 <StackLayout>
-                                    <Image Source="sokwani.png" HeightRequest="100"/>
+                                    <Image Source="mission.png" HeightRequest="100" HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="Our Mission" Style="{StaticResource H6}"/>
+                                    <Label Text="Build and provide quality and affordable enterprise-grade software products and services."/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame Grid.Column="1">
+                                <StackLayout>
+                                    <Image Source="spyglass.png" HeightRequest="100" HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="Our Vision" Style="{StaticResource H6}"/>
+                                    <Label Text="To be the leading provider of enterprise-grade software products and services within Africa."/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame Grid.Column="0" Grid.Row="1">
+                                <StackLayout>
+                                    <Image Source="value.png" HeightRequest="100" HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="Core Values" Style="{StaticResource H6}"/>
+                                    <Label Text="Customer Commitment, Trust, Quality, Simplicity, Integrity, Innovation and Continuous Learning"/>
                                 </StackLayout>
                             </Frame>
                         </Grid>
                     </StackLayout>
                 </xct:Expander>
-            </Frame>
-            <Frame>
+            </pv:PancakeView>
+            <pv:PancakeView CornerRadius="20" BackgroundColor="#4E4D4D" Padding="16">
                 <xct:Expander>
                     <xct:Expander.Header>
                         <StackLayout>
-                            <Label Text="The Team"/>
-                            <Label Text="Angle Dimension has a remarkably talented and perfectly qualified Management team specialized in various roles."/>
-                        </StackLayout>
-                    </xct:Expander.Header>
-                    <StackLayout>
-                        <Grid ColumnDefinitions="10,Auto">
+                            <Label Text="{x:Static resources:AngleResources.TeamTitle}"  Style="{StaticResource H5}" TextColor="{StaticResource ColorPrimary}"/>
+                            <Label Text="{x:Static resources:AngleResources.TeamSubTitle}"   Style="{StaticResource SubTitle1}" TextColor="White"/>
+                         <StackLayout Orientation="Horizontal">
                             <BoxView Grid.Column="0" BackgroundColor="Green" WidthRequest="3" HorizontalOptions="Start" 
                                              VerticalOptions="FillAndExpand"/>
-                            <Label Text="Leadership" Grid.Column="1"/>
-                        </Grid>
-                        <Label Text="The company's leadership is comprised of five individuals with various backgrounds and experiences, who are all driven to ensuring the availability of affordable and quality enterprise-grade software products and services within the Malawian and African markets."/>
+                                <Label Text="{x:Static resources:AngleResources.TeamSectionTitle}" Grid.Column="1"  TextColor="White"  Style="{StaticResource H6}"/>
+                        </StackLayout>
+                        </StackLayout>
+                    </xct:Expander.Header>
+                    <StackLayout  Margin="0, 20">
+                        <Label  TextColor="White" Style="{StaticResource Body1}" Text="{x:Static resources:AngleResources.TeamInfo}"/>
                         <CollectionView ItemsSource="{Binding People}" ItemsLayout="VerticalGrid, 2">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Frame>
-                                        <StackLayout>
-                                            <Image Source="{Binding Image}" HeightRequest="120"/>
-                                            <Label Text="{Binding Name}"/>
-                                            <Label Text="{Binding Title}"/>
-                                            <Label Text="{Binding Description}"/>
-                                        </StackLayout>
-                                    </Frame>
+                                    <StackLayout Padding="10">
+                                        <Image Source="{Binding Image}" HeightRequest="120"/>
+                                        <Label Text="{Binding Name}"  Style="{StaticResource SubTitle1}"  FontAttributes="Bold"  TextColor="White"/>
+                                        <Label Text="{Binding Title}"  Style="{StaticResource SubTitle2}" FontAttributes="Bold"  TextColor="{StaticResource ColorPrimary}"/>
+                                        <Label Text="{Binding Description}"  Style="{StaticResource Body2}"  TextColor="White"/>
+                                    </StackLayout>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
                     </StackLayout>
                 </xct:Expander>
-            </Frame>
+            </pv:PancakeView>
+            <Grid Padding="20">
+                <Label Text="Contact" Style="{StaticResource H4}" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Grid>
+            <pv:PancakeView CornerRadius="20" Padding="20"  BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
+                <pv:PancakeView.BackgroundGradientStops>
+                    <pv:GradientStopCollection>
+                        <pv:GradientStop Color="#8360c3" Offset="0" />
+                        <pv:GradientStop Color="#2ebf91" Offset="1" />
+                    </pv:GradientStopCollection>
+                </pv:PancakeView.BackgroundGradientStops>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="We are here for you" Style="{StaticResource H6}" TextColor="White"/>
+                        <Label Text="Our support team will try and respond to all requests within 24 hours (during the office hours)"  TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Our Office hours" Style="{StaticResource H6}" TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="Our offices are open from 8:00 am to 4:30 pm"  TextColor="White" Style="{StaticResource Caption}"/>
+                                <Label Text="Monday - Friday (only working days)"  TextColor="White"  Style="{StaticResource Caption}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Contact Us" Style="{StaticResource H6}" TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="Private Bag B416, Capital City, Lilongwe 3, Malawi"  TextColor="White" Style="{StaticResource Caption}"/>
+                                <Label Text="Area 47, Plot Number 47/1/33, Lilongwe"  TextColor="White"  Style="{StaticResource Caption}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="+265 (0) 1 761 800"  TextColor="White" Style="{StaticResource Caption}"/>
+                                <Label Text="Direct Line"  TextColor="White"  Style="{StaticResource Caption}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="help.png" HeightRequest="40" WidthRequest="40"/>
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="info@angledimension.com"  TextColor="White" Style="{StaticResource Caption}"/>
+                                <Label Text="Customer inquiry email"  TextColor="White"  Style="{StaticResource Caption}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </pv:PancakeView>
         </StackLayout>
     </ScrollView>
 </ContentPage>

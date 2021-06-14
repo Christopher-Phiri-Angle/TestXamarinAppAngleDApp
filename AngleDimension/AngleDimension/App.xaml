@@ -5,7 +5,11 @@
     <Application.Resources>
         <Color x:Key="ColorPrimary">#32CD32</Color>
         <Color x:Key="ColorPrimaryDark">#FFF</Color>
-        
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#57b863"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="50"/>
+        </Style>
         <Style x:Key="H1" TargetType="Label">
             <Setter Property="FontSize" Value="97"/>
             <Setter Property="CharacterSpacing" Value="-1.5"/>
@@ -54,6 +58,11 @@
         <Style x:Key="Body2" TargetType="Label">
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="CharacterSpacing" Value="0.25"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+        </Style>
+        <Style x:Key="Caption" TargetType="Label">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="CharacterSpacing" Value="0.4"/>
             <Setter Property="FontFamily" Value="Lato"/>
         </Style>
         <Style TargetType="Label">

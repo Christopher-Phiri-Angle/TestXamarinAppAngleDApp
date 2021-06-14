@@ -9,7 +9,9 @@
     </ContentPage.BindingContext>
     <ScrollView>
         <StackLayout>
-            <Label Text="Services" Style="{StaticResource H4}"/>
+            <Grid Padding="20">
+                <Label Text="Services" Style="{StaticResource H4}" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Grid>
             <Frame>
                 <StackLayout>
                     <StackLayout>
